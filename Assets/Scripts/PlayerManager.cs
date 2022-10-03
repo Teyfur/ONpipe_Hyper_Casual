@@ -113,7 +113,7 @@ public class PlayerManager : MonoBehaviour
             //play sound effect
         if (touch.phase==TouchPhase.Began) //Input.GetMouseButtonDown(0)
         {
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(click_sound, 0.1f);
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(click_sound, 0.5f);
 
         }
         //when touched screen
@@ -121,7 +121,7 @@ public class PlayerManager : MonoBehaviour
         {
             //set size of ring
             Vector3 target_vector= new Vector3(default_size.x, cyl_radius, cyl_radius);
-            transform.localScale = Vector3.Slerp(transform.localScale, target_vector, 0.125f);
+            transform.localScale = Vector3.Slerp(transform.localScale, target_vector, 0.3f); // evvel 0.3 yox 0.125 idi
 
             
         }
@@ -130,7 +130,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            transform.localScale = Vector3.Slerp(transform.localScale, default_size, 0.125f);
+            transform.localScale = Vector3.Slerp(transform.localScale, default_size, 0.3f); //evvel 0.3 yox 0.125 idi
 
         }
     }

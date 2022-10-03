@@ -40,7 +40,7 @@ public class LevelGenerator : MonoBehaviour
 
         cylinder.transform.localScale = new Vector3(radius, height, radius);
 
-        //fist slinder
+        //first slinder
         if (prevous_cylinder == null)
         {
             prevous_cylinder = Instantiate(cylinder, Vector3.zero, Quaternion.identity);
